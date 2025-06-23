@@ -36,12 +36,12 @@ const HighlightBlock = styled.div<{ $reverse?: boolean }>`
   }
 `
 
-const ImageContainer = styled(motion.div)`
+const ImageContainer = styled(motion.div)<{ $bgImage: string }>`
   position: relative;
   border-radius: 20px;
   overflow: hidden;
   aspect-ratio: 4/3;
-  background: url('/placeholder.svg?height=400&width=600') center/cover;
+  background: ${({ $bgImage }) => `url('${$bgImage}') center/cover no-repeat`};
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 `
 
@@ -90,21 +90,21 @@ const highlights = [
     description:
       "Hot-swappable modules let you customize your phone like never before. Upgrade your camera for a photo shoot, swap in extra battery for long trips, or add specialized sensors for work.",
     features: ["Hot-swappable modules", "Magnetic connections", "Universal module standard", "Endless customization"],
-    image: "/placeholder.svg?height=400&width=600",
+    image: "https://i.pinimg.com/736x/b1/96/1a/b1961a8ea9248ff539f0fc8647dcdd93.jpg",
   },
   {
     title: "Sustainable Technology",
     description:
       "Reduce electronic waste by upgrading only what you need. Keep your phone longer by replacing individual components instead of the entire device.",
     features: ["Reduce e-waste by 80%", "Upgrade individual parts", "Longer device lifespan", "Eco-friendly materials"],
-    image: "/placeholder.svg?height=400&width=600",
+    image: "https://i.pinimg.com/736x/6c/67/1b/6c671b0b4ae346ed08aee9e5323048e3.jpg",
   },
   {
     title: "Endless Possibilities",
     description:
       "From professional photography modules to health sensors, gaming controllers to projectors - the possibilities are limitless with our growing ecosystem.",
     features: ["Professional camera modules", "Health & fitness sensors", "Gaming attachments", "Productivity tools"],
-    image: "/placeholder.svg?height=400&width=600",
+    image: "https://i.pinimg.com/736x/14/36/b7/1436b73c1f7a0639ef760f11f1bedbe6.jpg",
   },
 ]
 
@@ -195,6 +195,7 @@ function HighlightItem({
   return (
     <HighlightBlock ref={ref} $reverse={reverse}>
       <ImageContainer
+        $bgImage={highlight.image}
         variants={imageVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
@@ -207,7 +208,6 @@ function HighlightItem({
 
       <ContentContainer variants={containerVariants} initial="hidden" animate={isInView ? "visible" : "hidden"}>
         <HighlightTitle variants={slideVariants}>{highlight.title}</HighlightTitle>
-
         <HighlightDescription variants={slideVariants}>{highlight.description}</HighlightDescription>
 
         <FeatureList variants={listVariants}>
@@ -231,3 +231,4 @@ export default function ProductHighlights() {
     </HighlightsContainer>
   )
 }
+

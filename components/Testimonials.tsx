@@ -121,33 +121,33 @@ const Dot = styled(motion.button)<{ $active: boolean }>`
     transform: scale(1.2);
   }
 `
-
 const testimonials = [
   {
-    text: "Project Ara is the future of smartphones. Being able to swap out my camera module for different shoots has revolutionized my photography workflow.",
-    author: "Alex Chen",
-    title: "Professional Photographer",
-    avatar: "AC",
+    text: "Project Ara is the future of smartphones. Swapping modules on the go has completely changed how I capture moments.",
+    author: "Ravi Menon",
+    title: "Freelance Photographer",
+    avatar: "RM",
   },
   {
-    text: "Finally, a phone that adapts to my needs instead of forcing me to adapt to it. The modular design is pure genius.",
-    author: "Maria Rodriguez",
-    title: "Tech Journalist, Wired",
-    avatar: "MR",
+    text: "Finally, a phone that bends to my workflow instead of the other way around. The modularity is a stroke of brilliance.",
+    author: "Neha Sharma",
+    title: "Tech Writer, Digit India",
+    avatar: "NS",
   },
   {
-    text: "As a developer, having specialized modules for different projects is incredible. The health sensor module alone has opened up so many possibilities.",
-    author: "David Kim",
-    title: "App Developer",
-    avatar: "DK",
+    text: "As a developer, I love customizing my phone for different projects. The sensor modules alone make this a developer's dream.",
+    author: "Arjun Iyer",
+    title: "Mobile App Developer",
+    avatar: "AI",
   },
   {
-    text: "Project Ara isn't just a phone - it's a platform. The sustainability aspect alone makes this a game-changer for the industry.",
-    author: "Sarah Johnson",
-    title: "Environmental Tech Analyst",
-    avatar: "SJ",
+    text: "This is more than just a smartphone. The sustainability and repairability built in makes it the smartest tech move of the decade.",
+    author: "Priya Das",
+    title: "Green Tech Researcher",
+    avatar: "PD",
   },
 ]
+
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0)

@@ -23,7 +23,7 @@ const HeroContainer = styled.section`
 const ProductImage = styled(motion.div)`
   width: 300px;
   height: 300px;
-  background: url('/placeholder.svg?height=300&width=200') center/cover;
+  background: url('https://i.pinimg.com/736x/fd/ce/47/fdce478a72fc6b65ef0414d29dd58dff.jpg') center/cover;
   border-radius: 20px;
   margin-bottom: 3rem;
   box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
